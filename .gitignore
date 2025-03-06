@@ -1,0 +1,20 @@
+target/
+dbt_packages/
+logs/
+**__pycache__/
+.ipynb_checkpoints/
+.history
+# Ignore .auth folders contents (usually keys)
+**/*.auth/*
+# But allow an informative .txt file in it
+!**/*.auth/*.txt
+*.tfstate
+*.tfstate.*
+**.terraform
+**.terraform.lock.*
+**logs/
+**.env
+**google_credentials.json
+*pgadmin_data/*
+*postgres_data/*
+*.init_data/*

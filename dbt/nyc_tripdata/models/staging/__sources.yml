@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: nyc_tripdata
+    schema: public
+    description: nyc trip data
+    tables:
+      - name: ext_green_tripdata
+        description: green trip data        
