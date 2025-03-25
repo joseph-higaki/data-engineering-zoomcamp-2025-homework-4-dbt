@@ -1,23 +1,30 @@
+# Troubleshoot
 
-# dbt + PostgreSQL as a setup template
-This is a simple dbt + postgre sql dev environment
-I will be forking this one into other projects with more components or complexity
+## WOrks!!!
+select 
+count(1)
+ FROM  ext_yellow_tripdata
 
-# How to run transformations
+select 
+count(1)
+ FROM  ext_fhv_tripdata
+54220903
+different to You should have exactly 43,244,696 records in your FHV table
 
-## Spin up postgresql
-```bash
-. run-pgdatabase.sh
-```  
 
-## Run dbt 
-```bash
-. load-env.sh
-cd dbt/synthea_sample
-dbt deps
-dbt debug
-dbt run
-dbt test
-```  
-First time Setup details here: [setup.md](./setup.md)
+## doesn't work
+SELECT  count(1) FROM {{ source('nyc_tripdata', 'ext_yellow_tripdata') }}
+SELECT  count(1) FROM {{ source('nyc_tripdata', 'ext_fhv_tripdata') }}
+54220903
 
+
+## Also pgadmin
+doesn't work
+![alt text](_resources/readme.md/image.png)
+
+
+##  WHAT TO DO!?
+
+restart computer
+restart containters
+https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/04-analytics-engineering/homework.md

@@ -3,7 +3,7 @@ nyc_tripdata:
     dev:
       host: "{{ env_var('DBT_DB_HOST') }}"
       dbname: "{{ env_var('DBT_DB') }}"      
-      schema: public
+      schema: "{{ env_var('DBT_OUTPUT_SCHEMA') }}"
       user: "{{ env_var('DBT_DB_USER') }}"
       pass: "{{ env_var('DBT_DB_PASSWORD') }}"
       port: "{{ env_var('POSTGRES_MAPPED_HOST_PORT') | as_number }}"      

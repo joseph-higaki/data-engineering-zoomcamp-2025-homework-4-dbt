@@ -1,9 +1,13 @@
 version: 2
 
 sources:
-  - name: nyc_tripdata
-    schema: public
+  - name: nyc_tripdata    
+    schema: "{{ env_var('DBT_SOURCE_SCHEMA') }}"  
     description: nyc trip data
     tables:
       - name: ext_green_tripdata
         description: green trip data        
+      - name: ext_yellow_tripdata
+        description: yellow trip data        
+      - name: ext_fhv_tripdata
+        description: green fhv data        

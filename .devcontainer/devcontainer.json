@@ -76,7 +76,7 @@
 				"bierner.markdown-preview-github-styles",
 				"mechatroner.rainbow-csv",
 				"bierner.markdown-mermaid",
-				"innoverio.vscode-dbt-power-user"
+				"innoverio.vscode-dbt-power-user@0.43.3"
 			]
 		}	
 	}
