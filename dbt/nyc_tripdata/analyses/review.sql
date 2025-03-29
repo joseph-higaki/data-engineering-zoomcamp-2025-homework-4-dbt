@@ -1,1 +1,3 @@
-SELECT  count(1) FROM {{ source('nyc_tripdata', 'ext_green_tripdata') }}
+SELECT min(pickup_datetime), max(pickup_datetime)
+ FROM {{ ref("fact_trips")}}
+

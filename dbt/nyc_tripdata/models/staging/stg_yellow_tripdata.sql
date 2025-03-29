@@ -14,8 +14,9 @@ select
         {{ dbt.safe_cast("pulocationid", api.Column.translate_type("integer")) }} as pickup_locationid,
         {{ dbt.safe_cast("dolocationid", api.Column.translate_type("integer")) }} as dropoff_locationid,
 
-        -- timestamps
-        {{ dbt.safe_cast("tpep_pickup_datetime", api.Column.translate_type("timestamp")) }} as pickup_datetime,
+        -- timestamps        
+        tpep_pickup_datetime as pickup_datetime,
+        tpep_pickup_date as pickup_date,
         {{ dbt.safe_cast("tpep_dropoff_datetime", api.Column.translate_type("timestamp")) }} as dropoff_datetime,
         
         -- trip info
@@ -42,6 +43,6 @@ where rn = 1
 -- dbt build --select <model.sql> --vars '{'is_test_run: false}'
 {% if var('is_test_run', default=true) %}
 
-  limit 100
+  limit 1000
 
 {% endif %}

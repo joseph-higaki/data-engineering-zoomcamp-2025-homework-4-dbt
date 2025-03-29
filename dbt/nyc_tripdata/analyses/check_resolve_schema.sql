@@ -1,0 +1,1 @@
+select '{{resolve_schema_for('stg') }}'

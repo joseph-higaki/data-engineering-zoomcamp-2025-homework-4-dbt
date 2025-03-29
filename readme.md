@@ -28,3 +28,8 @@ doesn't work
 restart computer
 restart containters
 https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/04-analytics-engineering/homework.md
+
+fact trips is too large
+![alt text](_resources/readme.md/image-1.png)
+
+![alt text](_resources/readme.md/image-2.png)
